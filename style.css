@@ -1,0 +1,239 @@
+body {
+   background-color: #32282B;
+   padding: 30px;
+}
+.background {
+   background-color: aliceblue;
+   
+}
+.circle-block {
+   position: relative;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100px;
+}
+.circle {
+   height: 100px;
+   width: 100px;
+   border-radius: 50%;
+   background-color: #fff;
+   position: absolute;
+   border: 5px solid blue;
+   animation-name: circle;
+
+}
+.circle-shadow {
+   height: 80px;
+   width: 80px;
+   border-radius: 50%;
+   background-color: #fff;
+   position: absolute;
+   box-shadow: 2px 0 1px ;
+   animation-name: circle-shadow;
+   animation-duration: 4s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+@keyframes circle-shadow {
+   0% {
+
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+.circle__triangle {
+   position: absolute;
+   border-style: solid;
+   border-radius: 20%;
+   border-width: 10px 0 10px 20px;
+   border-color: transparent transparent transparent #ff0303;
+}
+.circle2 {
+   height: 170px;
+   width: 170px;
+   border-radius: 50%;
+   position: absolute;
+   border: 2px solid grey;
+   animation-name: circle3;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+.circle3 {
+   height: 200px;
+   width: 200px;
+   border-radius: 50%;
+   position: absolute;
+   border: 2px solid grey;
+   animation-name: circle3;
+   animation-duration: 3s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+}
+@keyframes circle3 {
+   0% {
+      transform: scale(1);
+   }
+   100% {
+      transform: scale(2);
+   }
+}
+@keyframes circle {
+   0% {
+      transform
+   }
+}
+
+
+.link, .link2, .link3 {
+   color: yellow;
+   font-size: 20px;
+   transition-duration: 0.5s;
+}
+.link:hover, .link2:hover, .link3:hover{
+   color: red;
+   font-size: 30px;
+}
+.link2 {
+   transition-duration: 0.2s, 1.5s;
+   transition-property: color, font-size;
+}
+.link3 {
+   transition-delay: 0.2s, 1s;
+   transition-property: color, font-size;
+}
+.button {
+   color: white;
+   display: inline-block;
+   background-color: green;
+   padding: 7px 20px;
+   font-size: 15px;
+   border-radius: 10px;
+   margin: 15px 0;
+   box-shadow: 0 5px 0 rgba(0, 0, 0, 0.3);
+   transition: 0.2s;
+}
+.button:hover {
+   transform: translate(0, 3px);
+   box-shadow: 0 2px 0 rgba(0, 0, 0, 0.3);
+}
+.menu {
+
+}
+.menu:hover .menu__list {
+   transform: translate(0);
+   transition-delay: 0s;
+}
+.menu:hover .menu__item {
+   transform: translate(0);
+}
+
+.menu:hover .menu__item:nth-child(1) {
+   transition-delay: 0s;
+}
+.menu:hover .menu__item:nth-child(2) {
+   transition-delay: 0.2s;
+}
+.menu:hover .menu__item:nth-child(3) {
+   transition-delay: 0.4s;
+}
+.menu:hover .menu__item:nth-child(4) {
+   transition-delay: 0.6s;
+}
+.menu__list {
+   background-color: green;
+   padding: 15px 20px;
+   display: inline-block;
+   transform: translateX(-100%);
+   transition: 0.3s;
+   transition-delay: 1s;
+}
+.menu__item {
+   transform: translateX(-150%);
+   transition-duration: 1s;
+}
+.menu__item:nth-child(1) {
+   transition-delay: 0s;
+}
+.menu__item:nth-child(2) {
+   transition-delay: 0.2s;
+}
+.menu__item:nth-child(3) {
+   transition-delay: 0.4s;
+}
+.menu__item:nth-child(4) {
+   transition-delay: 0.6s;
+}
+.menu__item:not(:last-child) {
+   margin: 0 0 10px 0;
+}
+.menu__link {
+   color: #fff;
+}
+
+
+
+.menu2 {
+   background-color: green;
+   height: 120px;
+   width: 120px;
+   animation-name: somename;
+   animation-duration: 2s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+   animation-direction: alternate;
+   /*animation-fill-mode: forwards;*/
+   animation-play-state: running;
+}
+@keyframes somename {
+   0% {
+      transform: translate(0);
+      transform: rotate(180deg);
+   }
+   50% {
+      border-radius: 50%;
+      background-color: azure;
+   }
+   100% {
+      transform: translate(800px);
+   }
+}
+.menu2:hover {
+   animation-play-state:paused;
+}
+
+.cloud-empty {
+   height: 300px;
+   width: 300px;
+   transform: rotate(-30deg);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   animation-name: cloud-empty;
+   animation-timing-function: linear;
+   animation-direction: alternate;
+   animation-duration: 1s;
+   animation-iteration-count: infinite;
+   transform-origin: top center;
+}
+@keyframes cloud-empty {
+   100% {
+      transform:rotate(30deg)
+   }
+}
+.cloud-line {
+   height: 300px;
+   width: 20px;
+   background-color: black;
+   position: absolute;
+}
+.cloud {
+   height: 100px;
+   width: 200px;
+   background-color: black;
+   position: absolute;
+   top: 300px;
+}
